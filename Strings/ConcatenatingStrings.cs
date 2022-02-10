@@ -7,9 +7,9 @@ namespace Strings
         /// <summary>
         /// Concatenates two specified instances of <see cref="string"/>.
         /// </summary>
-        public static string ConcatenateStrings(string str1, string str2)
+        public static string ConcatenateStrings(string str0, string str1)
         {
-            return string.Concat(str1, str2);
+            return string.Concat(str0, str1);
         }
 
         /// <summary>

@@ -78,28 +78,28 @@ namespace Strings.Tests
         [TestCase("", "", ExpectedResult = "")]
         [TestCase("a", "b", ExpectedResult = "ab")]
         [TestCase("abc", "bcd", ExpectedResult = "abcbcd")]
-        public string ConcatenateStrings_TwoParameters_ParametersAreValid_ReturnsResult(string str1, string str2)
+        public string ConcatenateStrings_TwoParameters_ParametersAreValid_ReturnsResult(string str0, string str1)
         {
             // Act
-            return ConcatenatingStrings.ConcatenateStrings(str1, str2);
+            return ConcatenatingStrings.ConcatenateStrings(str0, str1);
         }
 
         [TestCase("", "", "", ExpectedResult = "")]
         [TestCase("a", "b", "c", ExpectedResult = "abc")]
         [TestCase("abc", "bcd", "cde", ExpectedResult = "abcbcdcde")]
-        public string ConcatenateStrings_ThreeParameters_ParametersAreValid_ReturnsResult(string str1, string str2, string str3)
+        public string ConcatenateStrings_ThreeParameters_ParametersAreValid_ReturnsResult(string str0, string str1, string str2)
         {
             // Act
-            return ConcatenatingStrings.ConcatenateStrings(str1, str2, str3);
+            return ConcatenatingStrings.ConcatenateStrings(str0, str1, str2);
         }
 
         [TestCase("", "", "", "", ExpectedResult = "")]
         [TestCase("a", "b", "c", "d", ExpectedResult = "abcd")]
         [TestCase("abc", "bcd", "cde", "def", ExpectedResult = "abcbcdcdedef")]
-        public string ConcatenateStrings_ThreeParameters_ParametersAreValid_ReturnsResult(string str1, string str2, string str3, string str4)
+        public string ConcatenateStrings_ThreeParameters_ParametersAreValid_ReturnsResult(string str0, string str1, string str2, string str3)
         {
             // Act
-            return ConcatenatingStrings.ConcatenateStrings(str1, str2, str3, str4);
+            return ConcatenatingStrings.ConcatenateStrings(str0, str1, str2, str3);
         }
 
         [TestCaseSource(nameof(ConcatenateStringsData))]
