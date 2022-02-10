@@ -15,7 +15,7 @@ namespace Strings
         /// <summary>
         /// Concatenates three specified instances of <see cref="string"/>.
         /// </summary>
-        public static string ConcatenateStrings(string str1, string str2, string str3)
+        public static string ConcatenateStrings(string str0, string str1, string str2)
         {
             // TODO #7-1. Analyze unit tests for the method, and add the method implementation.
             // Use String.Concat method to concatenate string: https://docs.microsoft.com/en-us/dotnet/api/system.string.concat
@@ -25,7 +25,7 @@ namespace Strings
         /// <summary>
         /// Concatenates four specified instances of <see cref="string"/>.
         /// </summary>
-        public static string ConcatenateStrings(string str1, string str2, string str3, string str4)
+        public static string ConcatenateStrings(string str0, string str1, string str2, string str3)
         {
             // TODO #7-2. Analyze unit tests for the method, and add the method implementation.
             // Use String.Concat method to concatenate string: https://docs.microsoft.com/en-us/dotnet/api/system.string.concat
