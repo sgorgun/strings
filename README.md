@@ -5,14 +5,14 @@ Beginner level task for practicing strings.
 
 ## Complete the Task
 
-1. Implement all static methods in the [StringLiterals.cs](WorkingWithStrings/StringLiterals.cs) file. See the method documentation and TODO comments.
-1. Implement all static methods in the [CreatingStrings.cs](WorkingWithStrings/CreatingStrings.cs) file. See the method documentation and TODO comments.
-1. Implement all static methods in the [UsingIndexerForAccessingStringChar.cs](WorkingWithStrings/UsingIndexerForAccessingStringChar.cs) file. See the method documentation and TODO comments.
-1. Implement all static methods in the [UsingRanges.cs](WorkingWithStrings/UsingRanges.cs) file. See the method documentation and TODO comments.
-1. Implement all static methods in the [SplittingStrings.cs](WorkingWithStrings/SplittingStrings.cs) file. See the method documentation and TODO comments.
-1. Implement all static methods in the [JoiningStrings.cs](WorkingWithStrings/JoiningStrings.cs) file. See the method documentation and TODO comments.
-1. Implement all static methods in the [ConcatenatingStrings.cs](WorkingWithStrings/ConcatenatingStrings.cs) file. See the method documentation and TODO comments.
-1. Implement all static methods in the [CopyingStrings.cs](WorkingWithStrings/CopyingStrings.cs) file. See the method documentation and TODO comments.
+1. Implement all static methods in the [StringLiterals.cs](Strings/StringLiterals.cs) file. See the method documentation and TODO comments.
+1. Implement all static methods in the [CreatingStrings.cs](Strings/CreatingStrings.cs) file. See the method documentation and TODO comments.
+1. Implement all static methods in the [UsingIndexerForAccessingStringChar.cs](Strings/UsingIndexerForAccessingStringChar.cs) file. See the method documentation and TODO comments.
+1. Implement all static methods in the [UsingRanges.cs](Strings/UsingRanges.cs) file. See the method documentation and TODO comments.
+1. Implement all static methods in the [SplittingStrings.cs](Strings/SplittingStrings.cs) file. See the method documentation and TODO comments.
+1. Implement all static methods in the [JoiningStrings.cs](Strings/JoiningStrings.cs) file. See the method documentation and TODO comments.
+1. Implement all static methods in the [ConcatenatingStrings.cs](Strings/ConcatenatingStrings.cs) file. See the method documentation and TODO comments.
+1. Implement all static methods in the [CopyingStrings.cs](Strings/CopyingStrings.cs) file. See the method documentation and TODO comments.
 
 
 ## Fix Compiler Issues
@@ -27,7 +27,7 @@ If a compiler error or warning message is not clear, [review errors details](htt
 1. Rebuild the solution.
 1. Fix all compiler warnings and errors.
 1. Run all unit tests, make sure all unit tests completed successfully.
-1. Review all changes, make sure the only code files (.cs) in Arrays project have changes. No changes in project files (.csproj) or in Arrays.Tests project.
+1. Review all changes, make sure the only code files (.cs) in Strings project have changes. No changes in project files (.csproj) or in Strings.Tests project.
 1. Stage your changes, and create a commit.
 1. Push your changes to remote repository.
 
