@@ -4,14 +4,14 @@
 namespace Strings.Tests
 {
     [TestFixture]
-    public sealed class UsingIndexerForAccessingStringCharTests
+    public sealed class UsingIndexerTests
     {
         [TestCase("Abcdefghijk", ExpectedResult = 'A')]
         [TestCase("0123456789", ExpectedResult = '0')]
         public char GetFirstChar_ParameterIsValid_ReturnsResult(string str)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetFirstChar(str);
+            return UsingIndexer.GetFirstChar(str);
         }
 
         [TestCase("aBcdefghijk", ExpectedResult = 'B')]
@@ -19,7 +19,7 @@ namespace Strings.Tests
         public char GetSecondChar_ParameterIsValid_ReturnsResult(string str)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetSecondChar(str);
+            return UsingIndexer.GetSecondChar(str);
         }
 
         [TestCase("abCdefghijk", ExpectedResult = 'C')]
@@ -27,7 +27,7 @@ namespace Strings.Tests
         public char GetThirdChar_ParameterIsValid_ReturnsResult(string str)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetThirdChar(str);
+            return UsingIndexer.GetThirdChar(str);
         }
 
         [TestCase("abCdefghijK", ExpectedResult = 'K')]
@@ -35,7 +35,7 @@ namespace Strings.Tests
         public char GetLastChar_ParameterIsValid_ReturnsResult(string str)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetLastChar(str);
+            return UsingIndexer.GetLastChar(str);
         }
 
         [TestCase("abcdefghiJk", ExpectedResult = 'J')]
@@ -43,7 +43,7 @@ namespace Strings.Tests
         public char GetNextToLastChar_ParameterIsValid_ReturnsResult(string str)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetNextToLastChar(str);
+            return UsingIndexer.GetNextToLastChar(str);
         }
 
         [TestCase("abcdefghIjk", ExpectedResult = 'I')]
@@ -51,7 +51,7 @@ namespace Strings.Tests
         public char GetThirdCharFromEnd_ParameterIsValid_ReturnsResult(string str)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetThirdCharFromEnd(str);
+            return UsingIndexer.GetThirdCharFromEnd(str);
         }
 
         [TestCase("Abcdefghijk", 1, ExpectedResult = 'A')]
@@ -61,7 +61,7 @@ namespace Strings.Tests
         public char GetNthChar_ParameterIsValid_ReturnsResult(string str, int n)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetNthChar(str, n);
+            return UsingIndexer.GetNthChar(str, n);
         }
 
         [TestCase("abcdefghijK", 1, ExpectedResult = 'K')]
@@ -71,7 +71,7 @@ namespace Strings.Tests
         public char GetNthCharFromEnd_ParameterIsValid_ReturnsResult(string str, int n)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetNthCharFromEnd(str, n);
+            return UsingIndexer.GetNthCharFromEnd(str, n);
         }
 
         [TestCase("abCdefghijK", ExpectedResult = 'K')]
@@ -79,7 +79,7 @@ namespace Strings.Tests
         public char GetLastCharUsingLength_ParameterIsValid_ReturnsResult(string str)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetLastCharUsingLength(str);
+            return UsingIndexer.GetLastCharUsingLength(str);
         }
 
         [TestCase("abcdefghiJk", ExpectedResult = 'J')]
@@ -87,7 +87,7 @@ namespace Strings.Tests
         public char GetNextToLastCharUsingLength_ParameterIsValid_ReturnsResult(string str)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetNextToLastCharUsingLength(str);
+            return UsingIndexer.GetNextToLastCharUsingLength(str);
         }
 
         [TestCase("abcdefGhijk", ExpectedResult = 'G')]
@@ -95,7 +95,7 @@ namespace Strings.Tests
         public char GetFifthCharFromEndUsingLength_ParameterIsValid_ReturnsResult(string str)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetFifthCharFromEndUsingLength(str);
+            return UsingIndexer.GetFifthCharFromEndUsingLength(str);
         }
 
         [TestCase("abcdefghijK", 1, ExpectedResult = 'K')]
@@ -105,7 +105,7 @@ namespace Strings.Tests
         public char GetNthCharFromEndUsingLength_ParameterIsValid_ReturnsResult(string str, int n)
         {
             // Act
-            return UsingIndexerForAccessingStringChar.GetNthCharFromEndUsingLength(str, n);
+            return UsingIndexer.GetNthCharFromEndUsingLength(str, n);
         }
 
         [TestCase("07K4M1DZ-BZ", '7', '4', 'Z')]
@@ -114,7 +114,7 @@ namespace Strings.Tests
         public void GetSpecialCodes(string serialNumber, char expectedCode1, char expectedCode2, char expectedCode3)
         {
             // Act
-            UsingIndexerForAccessingStringChar.GetSpecialCodes(serialNumber, out char code1, out char code2, out char code3);
+            UsingIndexer.GetSpecialCodes(serialNumber, out char code1, out char code2, out char code3);
 
             // Assert
             Assert.AreEqual(expectedCode1, code1);

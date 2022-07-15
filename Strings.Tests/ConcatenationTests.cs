@@ -1,11 +1,11 @@
-﻿using System.Globalization;
+﻿// ReSharper disable StringLiteralTypo
+using System.Globalization;
 using NUnit.Framework;
 
-// ReSharper disable StringLiteralTypo
 namespace Strings.Tests
 {
     [TestFixture]
-    public sealed class ConcatenatingStringsTests
+    public sealed class ConcatenationTests
     {
         private static readonly object[][] ConcatenateStringsData =
         {
@@ -78,28 +78,55 @@ namespace Strings.Tests
         [TestCase("", "", ExpectedResult = "")]
         [TestCase("a", "b", ExpectedResult = "ab")]
         [TestCase("abc", "bcd", ExpectedResult = "abcbcd")]
-        public string ConcatenateStrings_TwoParameters_ParametersAreValid_ReturnsResult(string str0, string str1)
+        public string ConcatenateTwoStrings1_ReturnsResult(string s1, string s2)
         {
             // Act
-            return ConcatenatingStrings.ConcatenateStrings(str0, str1);
+            return Concatenation.ConcatenateTwoStrings1(s1, s2);
+        }
+
+        [TestCase("", "", ExpectedResult = "")]
+        [TestCase("a", "b", ExpectedResult = "ab")]
+        [TestCase("abc", "bcd", ExpectedResult = "abcbcd")]
+        public string ConcatenateTwoStrings2_ReturnsResult(string s1, string s2)
+        {
+            // Act
+            return Concatenation.ConcatenateTwoStrings2(s1, s2);
         }
 
         [TestCase("", "", "", ExpectedResult = "")]
         [TestCase("a", "b", "c", ExpectedResult = "abc")]
         [TestCase("abc", "bcd", "cde", ExpectedResult = "abcbcdcde")]
-        public string ConcatenateStrings_ThreeParameters_ParametersAreValid_ReturnsResult(string str0, string str1, string str2)
+        public string ConcatenateThreeStrings1_ReturnsResult(string s1, string s2, string s3)
         {
             // Act
-            return ConcatenatingStrings.ConcatenateStrings(str0, str1, str2);
+            return Concatenation.ConcatenateThreeStrings1(s1, s2, s3);
+        }
+
+        [TestCase("", "", "", ExpectedResult = "")]
+        [TestCase("a", "b", "c", ExpectedResult = "abc")]
+        [TestCase("abc", "bcd", "cde", ExpectedResult = "abcbcdcde")]
+        public string ConcatenateThreeStrings2_ReturnsResult(string s1, string s2, string s3)
+        {
+            // Act
+            return Concatenation.ConcatenateThreeStrings2(s1, s2, s3);
         }
 
         [TestCase("", "", "", "", ExpectedResult = "")]
         [TestCase("a", "b", "c", "d", ExpectedResult = "abcd")]
         [TestCase("abc", "bcd", "cde", "def", ExpectedResult = "abcbcdcdedef")]
-        public string ConcatenateStrings_ThreeParameters_ParametersAreValid_ReturnsResult(string str0, string str1, string str2, string str3)
+        public string ConcatenateFourStrings1_ReturnsResult(string s1, string s2, string s3, string s4)
         {
             // Act
-            return ConcatenatingStrings.ConcatenateStrings(str0, str1, str2, str3);
+            return Concatenation.ConcatenateFourStrings1(s1, s2, s3, s4);
+        }
+
+        [TestCase("", "", "", "", ExpectedResult = "")]
+        [TestCase("a", "b", "c", "d", ExpectedResult = "abcd")]
+        [TestCase("abc", "bcd", "cde", "def", ExpectedResult = "abcbcdcdedef")]
+        public string ConcatenateFourStrings2_ReturnsResult(string s1, string s2, string s3, string s4)
+        {
+            // Act
+            return Concatenation.ConcatenateFourStrings2(s1, s2, s3, s4);
         }
 
         [TestCaseSource(nameof(ConcatenateStringsData))]
@@ -110,7 +137,7 @@ namespace Strings.Tests
             string expectedResult = (string)data[1];
 
             // Act
-            string actualResult = ConcatenatingStrings.ConcatenateStrings(strings);
+            string actualResult = Concatenation.ConcatenateStrings(strings);
 
             // Assert
             Assert.AreEqual(expectedResult, actualResult);
@@ -126,7 +153,7 @@ namespace Strings.Tests
             CultureInfo.CurrentCulture = new CultureInfo("en-US");
 
             // Act
-            string actualResult = ConcatenatingStrings.ConcatenateValues(str, intValue, longValue);
+            string actualResult = Concatenation.ConcatenateValues(str, intValue, longValue);
 
             // Tear down
             CultureInfo.CurrentCulture = currentCulture;
@@ -145,7 +172,7 @@ namespace Strings.Tests
             CultureInfo.CurrentCulture = new CultureInfo("en-US");
 
             // Act
-            string actualResult = ConcatenatingStrings.ConcatenateValues(shortValue, floatValue, boolValue, doubleValue);
+            string actualResult = Concatenation.ConcatenateValues(shortValue, floatValue, boolValue, doubleValue);
 
             // Tear down
             CultureInfo.CurrentCulture = currentCulture;
@@ -164,7 +191,7 @@ namespace Strings.Tests
             CultureInfo.CurrentCulture = new CultureInfo("en-US");
 
             // Act
-            string actualResult = ConcatenatingStrings.ConcatenateValues(values);
+            string actualResult = Concatenation.ConcatenateValues(values);
 
             // Tear down
             CultureInfo.CurrentCulture = currentCulture;

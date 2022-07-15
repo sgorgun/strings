@@ -38,23 +38,43 @@ namespace Strings.Tests
         }
 
         [Test]
-        public void ReturnFilePathStringLiteral()
+        public void ReturnFilePathStringLiteral1()
         {
             // Act
-            string actualResult = StringLiterals.ReturnFilePathStringLiteral();
+            string actualResult = StringLiterals.ReturnFilePathStringLiteral1();
 
             // Assert
             Assert.AreEqual("c:\\documents\\files\\myfile0234.txt", actualResult);
         }
 
         [Test]
-        public void ReturnFilePathVerbatimStringLiteral()
+        public void ReturnFilePathStringLiteral2()
         {
             // Act
-            string actualResult = StringLiterals.ReturnFilePathVerbatimStringLiteral();
+            string actualResult = StringLiterals.ReturnFilePathStringLiteral2();
 
             // Assert
-            Assert.AreEqual(@"c:\documents\files\myfile0234.txt", actualResult);
+            Assert.AreEqual("c:\\users\\myuser\\documents\\my-video-file.avi", actualResult);
+        }
+
+        [Test]
+        public void ReturnFilePathVerbatimStringLiteral1()
+        {
+            // Act
+            string actualResult = StringLiterals.ReturnFilePathVerbatimStringLiteral1();
+
+            // Assert
+            Assert.AreEqual(@"c:\documents\files\datafile0582.txt", actualResult);
+        }
+
+        [Test]
+        public void ReturnFilePathVerbatimStringLiteral2()
+        {
+            // Act
+            string actualResult = StringLiterals.ReturnFilePathVerbatimStringLiteral1();
+
+            // Assert
+            Assert.AreEqual(@"c:\users\myuser\documents\my-audio-file.mp3", actualResult);
         }
     }
 }
