@@ -71,7 +71,7 @@ namespace Strings.Tests
         public void ReturnFilePathVerbatimStringLiteral2()
         {
             // Act
-            string actualResult = StringLiterals.ReturnFilePathVerbatimStringLiteral1();
+            string actualResult = StringLiterals.ReturnFilePathVerbatimStringLiteral2();
 
             // Assert
             Assert.AreEqual(@"c:\users\myuser\documents\my-audio-file.mp3", actualResult);
