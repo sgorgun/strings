@@ -16,7 +16,7 @@ In the [StringLiterals.cs](Strings/StringLiterals.cs) file you have to implement
 | ReturnEmptyString                    |                                             | No           |
 | ReturnFilePathStringLiteral1         | c:\documents\files\myfile0234.txt           | No           |
 | ReturnFilePathStringLiteral2         | c:\users\myuser\documents\my-video-file.avi | No           |
-| ReturnFilePathVerbatimStringLiteral1 | c:\documents\files\myfile0234.txt           | Yes          |
+| ReturnFilePathVerbatimStringLiteral1 | c:\documents\files\datafile0582.txt         | Yes          |
 | ReturnFilePathVerbatimStringLiteral2 | c:\users\myuser\documents\my-audio-file.mp3 | Yes          |
 
 In the [ReturnAbcStringLiteral](Strings/StringLiterals.cs#L11) return a string literal "abc".
@@ -74,7 +74,7 @@ Return the "c:\documents\files\datafile0582.txt" verbatim string literal from th
 ```cs
 public static string ReturnFilePathVerbatimStringLiteral1()
 {
-    return @"c:\documents\files\myfile0234.txt";
+    return @"c:\documents\files\datafile0582.txt";
 }
 ```
 
