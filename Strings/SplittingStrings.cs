@@ -9,9 +9,7 @@ namespace Strings
         /// </summary>
         public static string[] SplitCommaSeparatedString(string str)
         {
-            // TODO #7-1. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Split method: https://docs.microsoft.com/en-us/dotnet/api/system.string.split
-            throw new NotImplementedException();
+            return str.Split(',');
         }
 
         /// <summary>
@@ -19,8 +17,7 @@ namespace Strings
         /// </summary>
         public static string[] SplitColonSeparatedString(string str)
         {
-            // TODO #7-2. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            return str.Split(':');
         }
 
         /// <summary>
@@ -28,8 +25,7 @@ namespace Strings
         /// </summary>
         public static string[] SplitCommaSeparatedStringMaxTwoElements(string str)
         {
-            // TODO #7-3. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            return str.Split(',', 2);
         }
 
         /// <summary>
@@ -37,8 +33,7 @@ namespace Strings
         /// </summary>
         public static string[] SplitColonSeparatedStringMaxThreeElements(string str)
         {
-            // TODO #7-4. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            return str.Split(':', 3);
         }
 
         /// <summary>
@@ -46,8 +41,7 @@ namespace Strings
         /// </summary>
         public static string[] SplitHyphenSeparatedStringMaxThreeElementsRemoveEmptyStrings(string str)
         {
-            // TODO #7-5. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            return str.Split('-', 3, StringSplitOptions.RemoveEmptyEntries);
         }
 
         /// <summary>
@@ -55,8 +49,7 @@ namespace Strings
         /// </summary>
         public static string[] SplitColonAndCommaSeparatedStringMaxFourElementsRemoveEmptyStrings(string str)
         {
-            // TODO #7-6. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            return str.Split(new char[] { ':', ',' }, 4, StringSplitOptions.RemoveEmptyEntries);
         }
 
         /// <summary>
@@ -64,8 +57,7 @@ namespace Strings
         /// </summary>
         public static string[] GetOnlyWords(string str)
         {
-            // TODO #7-7. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            return str.Split(new char[] { ' ', '.', ',', '!', '?', ';', ':', '-', '(', ')', '[', ']', '{', '}', '\'', '"', '\t', '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
         }
 
         /// <summary>
@@ -73,8 +65,7 @@ namespace Strings
         /// </summary>
         public static string[] GetDataFromCsvLine(string str)
         {
-            // TODO #7-8. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            return str.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }

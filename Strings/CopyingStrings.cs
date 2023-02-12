@@ -9,10 +9,9 @@ namespace Strings
         /// </summary>
         public static string CopyOneChar(string source, string destination)
         {
-            // TODO #10-1. Analyze unit tests for the method, and add the method implementation.
-            // Use String.ToCharArray method to transform a string to an array of characters: https://docs.microsoft.com/en-us/dotnet/api/system.string.tochararray
-            // Use String.CopyTo method to copy string characters to an array of characters: https://docs.microsoft.com/en-us/dotnet/api/system.string.copyto
-            throw new NotImplementedException();
+            char[] destinationArray = destination.ToCharArray();
+            source.CopyTo(0, destinationArray, 4, source.Length);
+            return new string(destinationArray);
         }
 
         /// <summary>
@@ -20,8 +19,10 @@ namespace Strings
         /// </summary>
         public static string CopyThreeChars(string source, string destination)
         {
-            // TODO #10-2. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            char[] destinationArray = destination.ToCharArray();
+            source.CopyTo(0, destinationArray, 0, 3);
+
+            return new string(destinationArray);
         }
 
         /// <summary>
@@ -29,8 +30,7 @@ namespace Strings
         /// </summary>
         public static string CopyFiveChars(string source, string destination)
         {
-            // TODO #10-3. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            return CopyOneChar(source, destination);
         }
 
         /// <summary>
@@ -38,8 +38,12 @@ namespace Strings
         /// </summary>
         public static string CopySixChars(string source, string destination)
         {
-            // TODO #10-4. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            char[] sourceChars = source.ToCharArray();
+            char[] destinationChars = destination.ToCharArray();
+
+            sourceChars[2..8].CopyTo(destinationChars, 5);
+
+            return new string(destinationChars);
         }
 
         /// <summary>
@@ -47,8 +51,18 @@ namespace Strings
         /// </summary>
         public static string GetProductionCode(string template, string regionCode, string locationCode, string dateCode, string factoryCode)
         {
-            // TODO #10-5. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            char[] templateChars = template.ToCharArray();
+            char[] regionCodeChars = regionCode.ToCharArray();
+            char[] locationCodeChars = locationCode.ToCharArray();
+            char[] dateCodeChars = dateCode.ToCharArray();
+            char[] factoryCodeChars = factoryCode.ToCharArray();
+
+            Array.Copy(regionCodeChars, 1, templateChars, 0, 1);
+            Array.Copy(locationCodeChars, 4, templateChars, 3, 2);
+            Array.Copy(dateCodeChars, 3, templateChars, 7, 3);
+            Array.Copy(factoryCodeChars, 2, templateChars, 12, 4);
+
+            return new string(templateChars);
         }
     }
 }

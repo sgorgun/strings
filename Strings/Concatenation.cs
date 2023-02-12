@@ -9,9 +9,7 @@ namespace Strings
         /// </summary>
         public static string ConcatenateTwoStrings1(string s1, string s2)
         {
-            // TODO #5-1. Analyze unit tests for the method, and add the method implementation.
-            // Use + operator to concatenate strings: https://docs.microsoft.com/en-us/dotnet/csharp/how-to/concatenate-multiple-strings#-and--operators
-            throw new NotImplementedException();
+            return s1 + s2;
         }
 
         /// <summary>
@@ -19,9 +17,7 @@ namespace Strings
         /// </summary>
         public static string ConcatenateThreeStrings1(string s1, string s2, string s3)
         {
-            // TODO #5-2. Analyze unit tests for the method, and add the method implementation.
-            // Use + operator to concatenate strings.
-            throw new NotImplementedException();
+            return s1 + s2 + s3;
         }
 
         /// <summary>
@@ -29,9 +25,7 @@ namespace Strings
         /// </summary>
         public static string ConcatenateFourStrings1(string s1, string s2, string s3, string s4)
         {
-            // TODO #5-3. Analyze unit tests for the method, and add the method implementation.
-            // Use + operator to concatenate strings.
-            throw new NotImplementedException();
+            return s1 + s2 + s3 + s4;
         }
 
         /// <summary>
@@ -39,9 +33,9 @@ namespace Strings
         /// </summary>
         public static string ConcatenateTwoStrings2(string s1, string s2)
         {
-            // TODO #5-4. Analyze unit tests for the method, and add the method implementation.
+            // Analyze unit tests for the method, and add the method implementation.
             // Use String.Concat method to concatenate string: https://docs.microsoft.com/en-us/dotnet/api/system.string.concat
-            throw new NotImplementedException();
+            return string.Concat(s1, s2);
         }
 
         /// <summary>
@@ -49,9 +43,7 @@ namespace Strings
         /// </summary>
         public static string ConcatenateThreeStrings2(string s1, string s2, string s3)
         {
-            // TODO #5-5. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Concat method to concatenate string.
-            throw new NotImplementedException();
+            return string.Concat(s1, s2, s3);
         }
 
         /// <summary>
@@ -59,9 +51,7 @@ namespace Strings
         /// </summary>
         public static string ConcatenateFourStrings2(string s1, string s2, string s3, string s4)
         {
-            // TODO #5-6. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Concat method to concatenate string.
-            throw new NotImplementedException();
+            return string.Concat(s1, s2, s3, s4);
         }
 
         /// <summary>
@@ -69,9 +59,7 @@ namespace Strings
         /// </summary>
         public static string ConcatenateStrings(IEnumerable<string> strings)
         {
-            // TODO #5-7. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Concat method to concatenate string.
-            throw new NotImplementedException();
+            return string.Concat(strings);
         }
 
         /// <summary>
@@ -79,9 +67,7 @@ namespace Strings
         /// </summary>
         public static string ConcatenateValues(string str, int intValue, long longValue)
         {
-            // TODO #5-8. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Concat method to concatenate string.
-            throw new NotImplementedException();
+            return string.Concat(str, intValue, longValue);
         }
 
         /// <summary>
@@ -89,9 +75,7 @@ namespace Strings
         /// </summary>
         public static string ConcatenateValues(short shortValue, float floatValue, bool boolValue, double doubleValue)
         {
-            // TODO #5-9. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Concat method to concatenate string.
-            throw new NotImplementedException();
+            return string.Concat(shortValue, floatValue, boolValue, doubleValue);
         }
 
         /// <summary>
@@ -99,9 +83,7 @@ namespace Strings
         /// </summary>
         public static string ConcatenateValues(IEnumerable<object> values)
         {
-            // TODO #5-10. Analyze unit tests for the method, and add the method implementation.
-            // Use String.Concat method to concatenate string.
-            throw new NotImplementedException();
+            return string.Concat(values);
         }
     }
 }

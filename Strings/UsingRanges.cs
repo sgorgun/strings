@@ -9,9 +9,7 @@ namespace Strings
         /// </summary>
         public static string GetStringWithAllChars(string str)
         {
-            // TODO #3-1. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[..];
         }
 
         /// <summary>
@@ -19,9 +17,7 @@ namespace Strings
         /// </summary>
         public static string GetStringWithoutFirstChar(string str)
         {
-            // TODO #3-2. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[1..];
         }
 
         /// <summary>
@@ -29,9 +25,7 @@ namespace Strings
         /// </summary>
         public static string GetStringWithoutTwoFirstChars(string str)
         {
-            // TODO #3-3. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[2..];
         }
 
         /// <summary>
@@ -39,9 +33,7 @@ namespace Strings
         /// </summary>
         public static string GetStringWithoutThreeFirstChars(string str)
         {
-            // TODO #3-4. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[3..];
         }
 
         /// <summary>
@@ -49,9 +41,7 @@ namespace Strings
         /// </summary>
         public static string GetStringWithoutLastChar(string str)
         {
-            // TODO #3-5. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[..^1];
         }
 
         /// <summary>
@@ -59,9 +49,7 @@ namespace Strings
         /// </summary>
         public static string GetStringWithoutTwoLastChars(string str)
         {
-            // TODO #3-6. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[..^2];
         }
 
         /// <summary>
@@ -69,9 +57,7 @@ namespace Strings
         /// </summary>
         public static string GetStringWithoutThreeLastChars(string str)
         {
-            // TODO #3-7. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[..^3];
         }
 
         /// <summary>
@@ -79,9 +65,7 @@ namespace Strings
         /// </summary>
         public static string GetStringWithoutFirstAndLastChars(string str)
         {
-            // TODO #3-8. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[1..^1];
         }
 
         /// <summary>
@@ -89,9 +73,7 @@ namespace Strings
         /// </summary>
         public static string GetStringWithoutTwoFirstAndTwoLastChars(string str)
         {
-            // TODO #3-9. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[2..^2];
         }
 
         /// <summary>
@@ -99,9 +81,7 @@ namespace Strings
         /// </summary>
         public static string GetStringWithoutThreeFirstAndThreeLastChars(string str)
         {
-            // TODO #3-10. Analyze unit tests for the method, and add the method implementation.
-            // Use range to get a substring: https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes
-            throw new NotImplementedException();
+            return str[3..^3];
         }
 
         /// <summary>
@@ -109,8 +89,10 @@ namespace Strings
         /// </summary>
         public static void GetProductionCodeDetails(string productionCode, out string regionCode, out string locationCode, out string dateCode, out string factoryCode)
         {
-            // TODO #3-11. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            regionCode = productionCode[..1];
+            locationCode = productionCode[3..5];
+            dateCode = productionCode[7..10];
+            factoryCode = productionCode[12..16];
         }
 
         /// <summary>
@@ -118,8 +100,21 @@ namespace Strings
         /// </summary>
         public static void GetSerialNumberDetails(string serialNumber, out string countryCode, out string manufacturerCode, out string factoryCode, out string stationCode)
         {
-            // TODO #3-12. Analyze unit tests for the method, and add the method implementation.
-            throw new NotImplementedException();
+            countryCode = default!;
+            manufacturerCode = default!;
+            factoryCode = default!;
+            stationCode = default!;
+            for (int i = 2; i < serialNumber.Length; i++)
+            {
+                if (char.IsLetter(serialNumber[i]))
+                {
+                    countryCode = serialNumber[i .. (i + 1)];
+                    manufacturerCode = serialNumber[(i + 1) .. (i + 3)];
+                    factoryCode = serialNumber[(i + 4) .. (i + 8)];
+                    stationCode = serialNumber[(i + 8) ..];
+                    break;
+                }
+            }
         }
     }
 }
